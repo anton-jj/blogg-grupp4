@@ -1,3 +1,4 @@
+
 import './App.css'
 import { Footer } from './components/Footer'
 import { Hero } from './components/Hero'
@@ -8,9 +9,9 @@ import React from 'react'
 
 
 function App() {
-
   return (
     <>
+
       <div>
         <Navbar />
         <Hero />
@@ -19,7 +20,7 @@ function App() {
       <Footer />
 
     </>
-  )
+  );
 }
 
-export default App
+export default App;
