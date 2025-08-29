@@ -1,0 +1,60 @@
+.bloog-main {
+  font-family: 'Lucida Sans Regular', Geneva, Verdana, sans-serif;
+  text-shadow: 2px 2px 4px var(--background);
+  display: flex;
+  height: fit-content;
+  background-color: var(--secondary);
+  border-radius: 1rem;
+  border: 5px solid var(--primary);
+  padding: 3%;
+}
+
+.bloog-main-section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-self: center;
+    justify-content: center;
+}
+
+.bloog-main-author-header {
+    display: flex;
+}
+
+.bloog-section {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 100%;
+    height: fit-content;
+    background-color: var(--accent);
+    border-radius: 1rem;
+    border: 2px solid var(--primary);
+}
+
+.bloog-post-upper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 1%;
+    margin-left: 0.5%;
+}
+
+.bloog-post-lower {
+    display: flex;
+    margin-left: 1%;
+}
+
+.bloog-post-title {
+    display: flex;
+}
+
+.bloog-post-date {
+    display: flex;
+
+}
+
+.bloog-post-content {
+    display: flex;
+}
+
