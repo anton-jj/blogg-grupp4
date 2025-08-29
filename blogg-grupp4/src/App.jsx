@@ -55,9 +55,7 @@ if (page === HOME_PAGE) {
 
       <div id="app">
         <Navbar changePage={changePage} />
-        <Hero />
         <main>{content}</main>
-        <InputField />
       </div>
         <Footer />
 
