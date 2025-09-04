@@ -11,15 +11,18 @@ export function InputField({ changePage, addPost }) {
 		const { name, value } = e.target;
 		setFormData((prev) => ({
 			...prev,
+			id: Math.floor(Math.random() * 100000),
 			[name]: value,
 		}));
 	};
+
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		if (!formData.title.trim() || !formData.content.trim()) {
 			alert("cant leave fields empty");
 			return;
 		}
+
 		const newPost = {
 			...formData,
 			createdAt: Date.now(),
@@ -31,6 +34,7 @@ export function InputField({ changePage, addPost }) {
 			author: "",
 			content: "",
 		});
+		console.log(newPost)
 	};
 	return (
 		<div>
