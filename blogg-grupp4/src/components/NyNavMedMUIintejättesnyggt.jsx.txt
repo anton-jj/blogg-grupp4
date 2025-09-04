@@ -1,0 +1,40 @@
+import { HOME_PAGE, ESTELLE_PAGE, SIMON_PAGE, ANTON_PAGE } from "../App"
+
+import * as React from 'react';
+import Typography from '@mui/material/Typography';
+import Breadcrumbs from '@mui/material/Breadcrumbs';
+import Link from '@mui/material/Link';
+
+
+function handleClick(event) {
+  event.preventDefault();
+  console.info('You clicked a breadcrumb.');
+}
+
+
+export function Navbar({ changePage }) {
+  return (
+
+    <div role="presentation" onClick={handleClick}>
+      <Breadcrumbs aria-label="breadcrumb">
+        
+        <Link underline="hover" color="white" aria-current="page" onClick={() => changePage(HOME_PAGE)}>
+        HOME
+        </Link>
+        
+        <Link underline="hover" color="white" aria-current="page" onClick={() => changePage(ANTON_PAGE)}>
+        Anton
+        </Link>
+        
+        <Link underline="hover" color="white" aria-current="page" onClick={() => changePage(ESTELLE_PAGE)}>
+        Estelle
+        </Link>
+
+        <Link underline="hover" color="white" aria-current="page" onClick={() => changePage(SIMON_PAGE)}>
+        Simon
+        </Link>
+      </Breadcrumbs>
+    </div>
+    
+  );
+}
