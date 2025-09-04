@@ -1,4 +1,6 @@
-
+import '../App.css'
+import '../bloog.css'
+import { Posts } from '../components/Posts'
 import "../simonStyle.css";
 
 
@@ -73,5 +75,3 @@ export function SimonSida() {
 }
     
     //formatera css amigastyle, box i mitten 
-
-   

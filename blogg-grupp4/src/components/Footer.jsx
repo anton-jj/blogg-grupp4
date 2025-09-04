@@ -1,4 +1,5 @@
 import '../App.css';
+import '../footer.css'
 
 export function Footer() {
     return (

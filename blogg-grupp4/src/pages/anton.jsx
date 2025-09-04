@@ -1,3 +1,7 @@
+import '../App.css'
+import '../bloog.css'
+import { Posts } from '../components/Posts'
+
 export function AntonSida({ changePage, posts }) {
 	const antons = posts.filter((p) =>
 		p.author && p.author.toLowerCase() == "anton"
