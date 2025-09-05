@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { savePosts } from "../localStorageUtil";
 
 export function InputField({ changePage, addPost }) {
 	const [formData, setFormData] = useState({
@@ -29,12 +30,12 @@ export function InputField({ changePage, addPost }) {
 		};
 
 		addPost(newPost);
+		savePosts()
 		setFormData({
 			title: "",
 			author: "",
 			content: "",
 		});
-		console.log(newPost)
 	};
 	return (
 		<div>

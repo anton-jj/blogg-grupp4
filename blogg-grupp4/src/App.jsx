@@ -5,11 +5,13 @@ import { Navbar } from "./components/Nav";
 
 import { InputField } from "./components/InputField";
 import { useState } from "react";
+import { useEffect } from "react";
 import { HomePage } from "./pages/homePage";
 import { EstelleSida } from "./pages/estelle";
 import { AntonSida } from "./pages/anton";
 import { SimonSida } from "./pages/simon";
 import React from "react";
+import { savePosts, loadPosts } from "./localStorageUtil";
 
 export const ESTELLE_PAGE = "estelle";
 export const SIMON_PAGE = "simon";
@@ -19,7 +21,18 @@ export const HOME_PAGE = "homepage";
 function App() {
 	const [page, setPage] = useState(HOME_PAGE);
 	const [posts, setPosts] = useState([]);
-	const addPost = (newPost) => setPosts((prev) => [newPost, ...prev]);
+
+	useEffect(() => {
+		setPosts(loadPosts());
+	}, []);
+
+	const addPost = (newPost) => {
+		const updated = [...posts, newPost]
+		setPosts(updated)
+		savePosts(updated)
+	}
+
+
 
 	const changePage = (page) => {
 		setPage(page);
