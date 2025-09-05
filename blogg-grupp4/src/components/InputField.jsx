@@ -26,11 +26,11 @@ export function InputField({ changePage, addPost }) {
 
 		const newPost = {
 			...formData,
+			id: Math.floor(Math.random() * 100000),
 			createdAt: Date.now(),
 		};
 
 		addPost(newPost);
-		savePosts()
 		setFormData({
 			title: "",
 			author: "",
