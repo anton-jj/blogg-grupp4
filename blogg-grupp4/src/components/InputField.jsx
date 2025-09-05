@@ -27,7 +27,7 @@ export function InputField({ changePage, addPost }) {
 		const newPost = {
 			...formData,
 			id: Math.floor(Math.random() * 100000),
-			createdAt: Date.now(),
+			createdAt: new Date(Date.now()).toLocaleString("sv-SE").slice(0, 10),
 		};
 
 		addPost(newPost);
