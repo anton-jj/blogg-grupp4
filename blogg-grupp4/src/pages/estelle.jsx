@@ -12,18 +12,20 @@ export function EstelleSida({ changePage, posts}) {
         <div className="bloog-main">
             <section className="bloog-main-section">
                 <h2 className='bloog-main-author-header'>Estelle's bloog</h2>
-                
-                {estellePosts.map((p) =>
-                <section className="post">
-                    <div className="post-content">
-                        <p>{p.id}</p>
-                        <h3>{p.title}</h3>
-                        <h4>{p.author}</h4>
-                        <p>{p.content}</p>
+            </section>
+            
+            {estellePosts.map((p) =>
+                <section className="bloog-section" key={p.createdAt}>
+                    <div className='bloog-post-upper'>
+                        <h3 className='bloog-post-title'>{p.title}</h3>
+                        <h3 className='bloog-post-date'>{p.createdAt}</h3>
+                    </div>
+                    <div className='bloog-post-lower'>
+                        <p className='bloog-post-content'>{p.content}</p>
                     </div>
                 </section>
                 )}
-            </section>
         </div>
     );
 }
+
