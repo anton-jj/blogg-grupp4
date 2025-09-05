@@ -28,11 +28,9 @@ function App() {
 
 	const addPost = (newPost) => {
 		const updated = [...posts, newPost]
-		setPosts(updated)
 		savePosts(updated)
+		setPosts(updated)
 	}
-
-
 
 	const changePage = (page) => {
 		setPage(page);
