@@ -2,11 +2,15 @@
   font-family: 'Lucida Sans Regular', Geneva, Verdana, sans-serif;
   text-shadow: 2px 2px 4px var(--background);
   display: flex;
+  flex-direction: column;
+  min-width: 100%;
+  max-width: fit-content;
   height: fit-content;
+  align-items: center;
   background-color: var(--secondary);
   border-radius: 1rem;
   border: 5px solid var(--primary);
-  padding: 3%;
+  padding: 6%;
 }
 
 .bloog-main-section {
@@ -15,10 +19,17 @@
     flex-wrap: wrap;
     align-self: center;
     justify-content: center;
+    width: 100%;
+    min-height: 50px;
+    max-height: fit-content;
+    align-items: center;
+    border: 5px solid var(--primary);
+    border-radius: 1rem;
 }
 
 .bloog-main-author-header {
     display: flex;
+    
 }
 
 .bloog-section {
@@ -26,22 +37,28 @@
     flex-direction: column;
     text-align: left;
     width: 100%;
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-top: 2%;
     height: fit-content;
     background-color: var(--accent);
     border-radius: 1rem;
     border: 2px solid var(--primary);
+    padding: 10px;
 }
 
 .bloog-post-upper {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    width: 100%;
     margin-right: 1%;
     margin-left: 0.5%;
 }
 
 .bloog-post-lower {
     display: flex;
+    width: 100%;
     margin-left: 1%;
 }
 
