@@ -1,7 +1,7 @@
 import '../App.css'
 import '../bloog.css'
 import { Posts } from '../components/Posts'
-import "../simonStyle.css";
+
 
 
 export function SimonSida({ changePage, posts, deletePost}) {
