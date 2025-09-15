@@ -1,0 +1,16 @@
+.anton-content-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 1rem;
+}
+.anton-heading {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
