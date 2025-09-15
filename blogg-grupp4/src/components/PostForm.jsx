@@ -1,33 +1,77 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import { savePosts } from "../localStorageUtil";
 
-function PostForm({ onSubmit }) {
-    const [title, setTitle] = useState('');
-    const [content, setContent] = useState('');
+export function PostForm({ changePage, addPost }) {
+	const [formData, setFormData] = useState({
+		title: "",
+		author: "",
+		content: "",
+	});
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        onSubmit({ title, content });
-        //setID(UUID); 
-        setTitle('');
-        setContent('');
-        //setDate('');
-        //setAuthor('');
-    };
+	const handleChange = (e) => {
+		const { name, value } = e.target;
+		setFormData((prev) => ({
+			...prev,
+			id: Math.floor(Math.random() * 100000),
+			[name]: value,
+		}));
+	};
 
-    return (
-        <form onSubmit={handleSubmit}>
-            <input
-            type="text"
-            placeholder="Title"
-            value={title}
-            onChange={(e) => setTitle(e.target.value)}
-            />
-            <textarea
-            placeholder="Content"
-            value={content}
-            onChange={(e) => setContent(e.target.value)}
-            ></textarea>
-            <button type="submit">Add Post</button>
-        </form>
-    )
+	const handleSubmit = (e) => {
+		e.preventDefault();
+		if (!formData.title.trim() || !formData.content.trim()) {
+			alert("cant leave fields empty");
+			return;
+		}
+
+		const newPost = {
+			...formData,
+			id: Math.floor(Math.random() * 100000),
+			createdAt: new Date(Date.now()).toLocaleString("sv-SE").slice(0, 10),
+		};
+
+		addPost(newPost);
+		setFormData({
+			title: "",
+			author: "",
+			content: "",
+		});
+	};
+	return (
+		<div>
+			<form onSubmit={handleSubmit}>
+				<div>
+					<label htmlFor="title">title</label>
+					<input
+						name="title"
+						type="text"
+						value={formData.title}
+						onChange={handleChange}
+					/>
+				</div>
+				<div>
+					<label htmlFor="author">author</label>
+					<input
+						name="author"
+						type="text"
+						value={formData.author}
+						onChange={handleChange}
+					/>
+				</div>
+
+				<div>
+					<label htmlFor="content">content</label>
+					<textarea
+						name="content"
+						id="content"
+						value={formData.content}
+						rows="6"
+						onChange={handleChange}
+					>
+					</textarea>
+				</div>
+				<button type="submit">submit</button>
+			</form>
+		</div>
+	);
 }
