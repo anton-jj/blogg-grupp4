@@ -11,7 +11,7 @@ import { EstelleSida } from "./pages/estelle";
 import { AntonSida } from "./pages/anton";
 import { SimonSida } from "./pages/simon";
 import React from "react";
-import { savePosts, loadPosts } from "./localStorageUtil";
+import { savePosts, loadPosts, removePost } from "./localStorageUtil";
 
 export const ESTELLE_PAGE = "estelle";
 export const SIMON_PAGE = "simon";
@@ -32,6 +32,11 @@ function App() {
 		setPosts(updated)
 	}
 
+	const deletePost = (id) => {
+		removePost(id);
+		setPosts(loadPosts());
+	}
+
 	const changePage = (page) => {
 		setPage(page);
 	};
@@ -41,11 +46,11 @@ function App() {
 	if (page === HOME_PAGE) {
 		content = <HomePage changePage={changePage} addPost={addPost} />;
 	} else if (page === ESTELLE_PAGE) {
-		content = <EstelleSida changePage={changePage} posts={posts} />;
+		content = <EstelleSida changePage={changePage} posts={posts} deletePost={deletePost} />;
 	} else if (page === ANTON_PAGE) {
-		content = <AntonSida changePage={changePage} posts={posts} />;
+		content = <AntonSida changePage={changePage} posts={posts} deletePost={deletePost} />;
 	} else if (page === SIMON_PAGE) {
-		content = <SimonSida changePage={changePage} posts={posts} />;
+		content = <SimonSida changePage={changePage} posts={posts} deletePost={deletePost} />;
 	}
 
 	return (

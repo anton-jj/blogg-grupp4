@@ -4,7 +4,7 @@ import { Posts } from '../components/Posts'
 import "../simonStyle.css";
 
 
-export function SimonSida({ changePage, posts}) {
+export function SimonSida({ changePage, posts, deletePost}) {
    
     const simonPosts = posts.filter((p) => p.author && p.author.toLowerCase() == "simon");
 
@@ -19,7 +19,7 @@ export function SimonSida({ changePage, posts}) {
             <h3>{p.title}</h3>
             <h4>{p.author}</h4>
             <p>{p.content}</p>
-           
+           <button onClick={() => deletePost(p.id)}>Delete meee</button>
             </div>
         </section>
    
@@ -27,5 +27,3 @@ export function SimonSida({ changePage, posts}) {
     </div>
     );
 }
-    
-    //formatera css amigastyle, box i mitten 
