@@ -4,8 +4,9 @@
     padding: 2rem;
     padding-bottom: 0;
     text-align: center;
+    box-sizing: border-box;
 
-    /*    
+    /*
     --text: #F2E2D2;
     --background: #1D201F;
     --primary: #56CBF9;
@@ -13,7 +14,7 @@
     --accent: #416788;
     Light Red: #F05D5E
     Dark Purple: #65334D
-    Pale Purple: #5a4761 
+    Pale Purple: #5a4761
     Orange: #E9724C
     Celtic Blue: #276FBF
     Dark Maroon: #450920

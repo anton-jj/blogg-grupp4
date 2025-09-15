@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { savePosts } from "../localStorageUtil";
+import "../postform.css";
 
 export function PostForm({ changePage, addPost }) {
 	const [formData, setFormData] = useState({
@@ -37,10 +38,10 @@ export function PostForm({ changePage, addPost }) {
 		});
 	};
 	return (
-		<div>
+		<div className="submit-page-field">
 			<form onSubmit={handleSubmit}>
-				<div>
-					<label htmlFor="title">title</label>
+				<div className="submit-page-title">
+					<label htmlFor="title">Title:</label>
 					<input
 						name="title"
 						type="text"
@@ -48,7 +49,7 @@ export function PostForm({ changePage, addPost }) {
 						onChange={handleChange}
 					/>
 				</div>
-				<div>
+				<div className="submit-page-author">
 				<select name="author"
 					id="author"
 					value={formData.author}
@@ -62,8 +63,8 @@ export function PostForm({ changePage, addPost }) {
 				</select>
 				</div>
 
-				<div>
-					<label htmlFor="content">content</label>
+				<div className="submit-page-content">
+					<label htmlFor="content">Content:</label>
 					<textarea
 						name="content"
 						id="content"

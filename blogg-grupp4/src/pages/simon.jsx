@@ -19,6 +19,7 @@ export function SimonSida({ changePage, posts}) {
             <h3>{p.title}</h3>
             <h4>{p.author}</h4>
             <p>{p.content}</p>
+           
             </div>
         </section>
    
