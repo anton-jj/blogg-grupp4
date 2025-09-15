@@ -9,5 +9,5 @@ export function savePosts(posts) {
 
 export function removePost(id) {
 	const posts = loadPosts().filter((i) => i.id != id)
-	savePosts()
+	savePosts(posts)
 }
