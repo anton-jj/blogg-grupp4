@@ -1,15 +1,15 @@
 .bloog-main {
   font-family: 'Lucida Sans Regular', Geneva, Verdana, sans-serif;
-  text-shadow: 2px 2px 4px var(--background);
+  text-shadow: 2px 2px 4px var(--secondary);
   display: flex;
   flex-direction: column;
-  min-width: 100%;
-  max-width: fit-content;
+  min-width: fit-content;
+  max-width: 100%;
   height: fit-content;
   align-items: center;
-  background-color: var(--secondary);
+  background-color: var(--background);
   border-radius: 1rem;
-  border: 5px solid var(--primary);
+  border: 5px solid var(--secondary);
   padding: 6%;
 }
 
@@ -41,7 +41,7 @@
     margin-right: 3%;
     margin-top: 2%;
     height: fit-content;
-    background-color: var(--accent);
+    background-color: var(--background);
     border-radius: 1rem;
     border: 2px solid var(--primary);
     padding: 10px;
