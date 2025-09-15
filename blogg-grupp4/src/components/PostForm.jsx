@@ -12,7 +12,6 @@ export function PostForm({ changePage, addPost }) {
 		const { name, value } = e.target;
 		setFormData((prev) => ({
 			...prev,
-			id: Math.floor(Math.random() * 100000),
 			[name]: value,
 		}));
 	};
@@ -50,13 +49,17 @@ export function PostForm({ changePage, addPost }) {
 					/>
 				</div>
 				<div>
-					<label htmlFor="author">author</label>
-					<input
-						name="author"
-						type="text"
-						value={formData.author}
-						onChange={handleChange}
-					/>
+				<select name="author"
+					id="author"
+					value={formData.author}
+					onChange={handleChange} >
+
+					<label htmlFor="auhor">Author</label>
+					<option value="" disabled></option>
+					<option value="anton">Anton</option>
+					<option value="estelle">Estelle</option>
+					<option value="simon">Simon</option>
+				</select>
 				</div>
 
 				<div>
