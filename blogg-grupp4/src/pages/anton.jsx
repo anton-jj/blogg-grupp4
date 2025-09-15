@@ -1,5 +1,7 @@
 import '../App.css'
 import '../bloog.css'
+import '../components/BlogCard'
+import { BlogCard } from '../components/BlogCard';
 import { Posts } from '../components/Posts'
 
 export function AntonSida({ changePage, posts }) {
@@ -12,14 +14,11 @@ export function AntonSida({ changePage, posts }) {
 		<>
 			<h2>antons’s Posts</h2>
 			{antons.length === 0 ? <p>No posts yet.</p> : (
-				<ul>
+				<div>
 					{antons.map((p) => (
-						<li key={p.createdAt}>
-							<strong>{p.title}</strong>
-							<p>{p.content}</p>
-						</li>
+						<BlogCard title={p.title} author={p.author} content={p.content} date={p.createdAt} />
 					))}
-				</ul>
+				</div>
 			)}
 		</>
 	);
