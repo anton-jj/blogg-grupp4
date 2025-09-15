@@ -3,7 +3,7 @@ import { Footer } from "./components/Footer";
 import { Hero } from "./components/Hero";
 import { Navbar } from "./components/Nav";
 
-import { InputField } from "./components/InputField";
+import { PostForm } from "./components/PostForm.jsx";
 import { useState } from "react";
 import { useEffect } from "react";
 import { HomePage } from "./pages/homePage";
