@@ -2,7 +2,6 @@ import '../App.css'
 import { BlogCard } from '../components/BlogCard';
 import '../simon.css'
 
-
 export function SimonSida({ changePage, posts, deletePost}) {
    
     const simonPosts = posts.filter((p) => p.author && p.author.toLowerCase() == "simon");
@@ -22,9 +21,6 @@ export function SimonSida({ changePage, posts, deletePost}) {
                         deletePost={deletePost}
                         id={p.id} />
                     ))}
-                
-
-                    
                 </div>
             )}
         </>
