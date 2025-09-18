@@ -13,20 +13,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
- button {
-
-  border: 1px solid var(--secondary);
-  border-radius: 0.4rem;
-  background: transparent;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-  color: var(--text);
-}
-
- button:hover {
-    background-color: var(--accent);
-    color: var(--text);
-}
 a {
   font-weight: 500;
   color: #646cff;

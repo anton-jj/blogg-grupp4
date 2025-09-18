@@ -1,6 +1,5 @@
 import "../components/BlogCard";
 import { BlogCard } from "../components/BlogCard";
-import { Posts } from "../components/Posts";
 import "../anton.css";
 
 export function AntonSida({ changePage, posts }) {
