@@ -44,6 +44,11 @@
     margin-top: 1rem;
 }
 
+.submit-page-author select{
+border: 2px solid var(--secondary);
+border-radius: 0.2rem;
+}
+
 .submit-page-author label {
     display: flex;
 }
