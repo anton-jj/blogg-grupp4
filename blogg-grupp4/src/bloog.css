@@ -25,11 +25,11 @@
     align-items: center;
     border: 5px solid var(--primary);
     border-radius: 1rem;
+    margin-bottom: 2rem;
 }
 
 .bloog-main-author-header {
     display: flex;
-    
 }
 
 .bloog-section {
@@ -60,6 +60,7 @@
     display: flex;
     width: 100%;
     margin-left: 1%;
+    justify-content: space-between;
 }
 
 .bloog-post-title {
@@ -75,3 +76,15 @@
     display: flex;
 }
 
+.bloog-post-delete {
+    display: flex;
+    width: 4rem;
+    height: 2rem;
+    align-items: center;
+    justify-content: flex-end;
+    
+}
+
+.bloog-post-delete h4 {
+    display: flex;
+}
