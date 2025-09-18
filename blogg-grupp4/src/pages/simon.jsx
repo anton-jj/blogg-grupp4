@@ -1,6 +1,6 @@
 import '../App.css'
 import { BlogCard } from '../components/BlogCard';
-import '../simon.css'
+import '../styles/simon.css'
 
 export function SimonSida({ changePage, posts, deletePost}) {
    
@@ -8,7 +8,7 @@ export function SimonSida({ changePage, posts, deletePost}) {
 
     return (
          <>
-            <h2 className='simon-heading'>Simons' blog</h2>
+            <h2 className='simon-heading'>Simon's blog</h2>
             {simonPosts.length === 0 ? <p>No posts yet, write something in the form on the homepage</p> : (
                 <div className='simon-content-container'>
                     {simonPosts.map((p) => (
