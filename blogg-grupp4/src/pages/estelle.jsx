@@ -1,5 +1,5 @@
 import '../App.css'
-import '../bloog.css'
+import '../styles/bloog.css'
 import { BlogCard } from '../components/BlogCard';
 
 export function EstelleSida({ changePage, posts, deletePost}) {

@@ -1,6 +1,6 @@
 import "../components/BlogCard";
 import { BlogCard } from "../components/BlogCard";
-import "../anton.css";
+import "../styles/anton.css";
 
 export function AntonSida({ changePage, posts, deletePost }) {
   const antons = posts.filter(

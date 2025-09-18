@@ -1,4 +1,4 @@
-import '../blogCard.css'
+import '../styles/blogCard.css'
 
 
 export function BlogCard({title, author, content, date, deletePost, id}) {

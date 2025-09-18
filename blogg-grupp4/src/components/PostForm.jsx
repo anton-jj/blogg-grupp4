@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { savePosts } from "../localStorageUtil";
-import "../postform.css";
+import "../styles/postform.css";
 
 export function PostForm({ changePage, addPost }) {
 	const [formData, setFormData] = useState({

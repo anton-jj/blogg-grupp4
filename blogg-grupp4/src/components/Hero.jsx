@@ -1,4 +1,4 @@
-import "../hero.css";
+import "../styles/hero.css";
 export function Hero() {
 	const handleClick = () => {
 		alert("hello world");

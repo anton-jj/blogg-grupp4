@@ -1,5 +1,5 @@
 import { HOME_PAGE, ESTELLE_PAGE, SIMON_PAGE, ANTON_PAGE } from "../App"
-import "../nav.css";
+import "../styles/nav.css";
 
 export function Navbar({ changePage }) {
   return (
