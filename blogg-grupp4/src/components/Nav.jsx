@@ -6,12 +6,10 @@ export function Navbar({ changePage }) {
 
     <nav className="nav-container">
      
-      
         <button onClick={() => changePage(HOME_PAGE)}>Home</button>
         <button onClick={() => changePage(ANTON_PAGE)}>Anton</button>
         <button onClick={() => changePage(ESTELLE_PAGE)}>Estelle</button>
         <button onClick={() => changePage(SIMON_PAGE)}>Simon</button>
-    
     
     </nav>
 

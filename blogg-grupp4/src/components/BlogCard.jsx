@@ -13,5 +13,4 @@ export function BlogCard({title, author, content, date, deletePost, id}) {
                         <button className='blog-card-deleteBtn' onClick={()=> deletePost(id)}>Delete post</button>
                 </article>
         )
-
 }

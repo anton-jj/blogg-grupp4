@@ -1,16 +1,12 @@
 import "./App.css";
 import { Footer } from "./components/Footer";
-import { Hero } from "./components/Hero";
 import { Navbar } from "./components/Nav";
-
-import { PostForm } from "./components/PostForm.jsx";
 import { useState } from "react";
 import { useEffect } from "react";
 import { HomePage } from "./pages/homePage";
 import { EstelleSida } from "./pages/estelle";
 import { AntonSida } from "./pages/anton";
 import { SimonSida } from "./pages/simon";
-import React from "react";
 import { savePosts, loadPosts, removePost } from "./localStorageUtil";
 
 export const ESTELLE_PAGE = "estelle";

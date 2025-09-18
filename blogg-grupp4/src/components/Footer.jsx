@@ -7,7 +7,7 @@ export function Footer() {
             <section className='footer-sub-main-container'>
                 <div className='footer-sub-main-left'>
                     <h2 className='footer-head-main'>
-                        Footer Section h2 left
+                        Grupp 4! <br /> 2025
                     </h2>
                 </div>
                 <div className='footer-sub-main-right'>
@@ -23,7 +23,6 @@ export function Footer() {
             </section>
         </footer>
     )
-
 }
 
 export default Footer;
