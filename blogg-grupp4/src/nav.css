@@ -13,26 +13,4 @@
     gap: 1rem;
     justify-content: center;
     position: top;
-    
-
-}
-
-.nav-container button {
-
-  border: 1px solid var(--secondary);
-  border-radius: 0.4rem;
-  background: transparent;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-  color: var(--text);
-}
-
-.nav-container button:hover {
-    background-color: var(--accent);
-    color: var(--text);
-}
-
-.nav-container button:focus {
-    outline: 1px solid var(--text);
-   
 }

@@ -6,6 +6,9 @@
   gap: 1.5rem;
   padding: 1rem;
 }
+.blogcard{
+  background-color: red;
+}
 .anton-heading {
   text-align: center;
   font-size: 2rem;
