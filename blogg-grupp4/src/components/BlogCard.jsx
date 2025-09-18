@@ -1,5 +1,7 @@
 import '../blogCard.css'
-export function BlogCard({title, author, content, date}) {
+
+
+export function BlogCard({title, author, content, date, deletePost, id}) {
         return (
                 <article className="blog-card">
                         <h2 className="blog-title">{title}</h2>
@@ -7,6 +9,7 @@ export function BlogCard({title, author, content, date}) {
                         <small> written: {date}</small>
                         </p>
                         <p className="blog-content">{content}</p>
+                        <button onClick={()=> deletePost(id)}>Delete post</button>
                 </article>
         )
 
