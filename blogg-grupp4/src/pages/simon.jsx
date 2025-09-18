@@ -1,7 +1,6 @@
 import '../App.css'
-import '../bloog.css'
-import { Posts } from '../components/Posts'
-
+import { BlogCard } from '../components/BlogCard';
+import '../simon.css'
 
 
 export function SimonSida({ changePage, posts, deletePost}) {
@@ -9,21 +8,27 @@ export function SimonSida({ changePage, posts, deletePost}) {
     const simonPosts = posts.filter((p) => p.author && p.author.toLowerCase() == "simon");
 
     return (
-    <div>
-        
-        {simonPosts.map((p) =>
+         <>
+            <h2 className='simon-heading'>Simons' blog</h2>
+            {simonPosts.length === 0 ? <p>No posts yet, write something in the form on the homepage</p> : (
+                <div className='simon-content-container'>
+                    {simonPosts.map((p) => (
+                        <BlogCard 
+                        key={p.id} 
+                        title={p.title} 
+                        author={p.author} 
+                        content={p.content} 
+                        date={p.createdAt}
+                        deletePost={deletePost}
+                        id={p.id} />
+                    ))}
+                
 
-        <section className="post">
-            <div className="post-content">
-            <p>{p.id}</p>
-            <h3>{p.title}</h3>
-            <h4>{p.author}</h4>
-            <p>{p.content}</p>
-           <button onClick={() => deletePost(p.id)}>Delete meee</button>
-            </div>
-        </section>
-   
-        )}
-    </div>
+                    
+                </div>
+            )}
+        </>
     );
 }
+
+
