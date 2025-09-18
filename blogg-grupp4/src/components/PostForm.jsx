@@ -50,7 +50,7 @@ export function PostForm({ changePage, addPost }) {
 					/>
 				</div>
 				<div className="submit-page-author">
-					<label htmlFor="auhor">Author</label>
+					<label htmlFor="auhor">Author:</label>
 				<select name="author"
 					id="author"
 					value={formData.author}

@@ -1,13 +1,13 @@
 .submit-page-main {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .submit-page-field {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .submit-page-field form {
@@ -64,7 +64,7 @@ border-radius: 0.2rem;
     display: flex;
     flex-direction: column;
     margin-top: 1rem;
-    
+
 }
 
 .submit-page-content label {
